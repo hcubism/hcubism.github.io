@@ -1,0 +1,25 @@
+{
+  "name": "hcubism.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hcubism/hcubism.github.io.git"
+  },
+  "author": "Hannah Hu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hcubism/hcubism.github.io/issues"
+  },
+  "homepage": "https://github.com/hcubism/hcubism.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "postcss-import": "^14.1.0",
+    "tailwindcss": "^3.1.6"
+  }
+}
