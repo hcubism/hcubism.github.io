@@ -11,15 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install Dependencies
-        run: npm install
-
       - name: Build & Deploy to GitHub Pages
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
           GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
-        uses: hcubism/jekyll-deploy-gh-pages@master
+        uses: yurikoval/jekyll-deploy-gh-pages@master
 
 # jobs:
 #    build:
