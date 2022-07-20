@@ -6,8 +6,12 @@ plugins:
   - jekyll-postcss
 
 sass:
+  # Change to sass-embedded
+  # See https://github.com/jekyll/jekyll-sass-converter#sassc=
+  implementation: sass-embedded
   load_paths:
     - _sass
     - node_modules
 
+# Based on https://medium.com/@mehdi.h/using-jekyll-with-tailwindcss-on-github-pages-50c3d8401230
 include: ["node_modules/tailwindcss"]
