@@ -6,9 +6,6 @@ plugins:
   - jekyll-postcss
 
 sass:
-  # Change to sass-embedded
-  # See https://github.com/jekyll/jekyll-sass-converter#sassc=
-  implementation: sass-embedded
   load_paths:
     - _sass
     - node_modules
