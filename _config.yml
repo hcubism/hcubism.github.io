@@ -12,5 +12,3 @@ sass:
 
 # Based on https://medium.com/@mehdi.h/using-jekyll-with-tailwindcss-on-github-pages-50c3d8401230
 include: ["node_modules/tailwindcss"]
-
-destination: ./build
