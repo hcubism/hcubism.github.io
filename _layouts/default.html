@@ -6,9 +6,26 @@
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   </head>
-  <body>
-    <div  class="text-center text-red-500">Hello world</div>
+  <body class="font-serif">
+    <div class="grid grid-rows-[auto_1fr_auto] p-5 max-w-md mx-auto my-0">
+      {% include head.html %}
 
-    {{ content }}
+      {{ content }}
+
+    </div>
+    <script>
+      WebFontConfig = {
+        google: {
+          families: ['Merriweather+Sans:700:latin', 'Merriweather::latin'],
+        }
+      };
+
+       (function(d) {
+          var wf = d.createElement('script'), s = d.scripts[0];
+          wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+          wf.async = true;
+          s.parentNode.insertBefore(wf, s);
+       })(document);
+    </script>
   </body>
 </html>

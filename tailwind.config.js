@@ -14,6 +14,10 @@ module.exports = {
       'xl': '120rem', // 1440p
       '2xl': '240rem', // 4K
     },
+    fontFamily: {
+      'sans': ['Merriweather Sans', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
+      'serif': ['Merriweather', 'Times New Roman', 'serif'],
+    },
     extend: {},
   },
   plugins: [],
