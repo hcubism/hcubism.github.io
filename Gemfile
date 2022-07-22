@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 gem "jekyll"
-gem 'jekyll-paginate', '~> 1.1'
+gem 'jekyll-paginate-v2'
 gem 'jekyll-feed', '~> 0.16.0'
 gem 'jekyll-sitemap', '~> 1.4'
 gem "jekyll-postcss"
