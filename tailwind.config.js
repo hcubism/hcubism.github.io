@@ -20,9 +20,15 @@ module.exports = {
     },
     extend: {
       maxWidth: {
+        'sm': '24rem',
         'md': '48rem',
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio')
+  ],
+  corePlugins: {
+    aspectRatio: false,
+  }
 }

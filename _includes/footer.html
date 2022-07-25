@@ -1,0 +1,31 @@
+<footer
+  class="
+    font-sans
+    my-0 mx-auto
+    w-full
+    max-w-sm
+    before:aspect-w-5
+    before:aspect-h-2
+    before:block
+    bg-[url('/assets/img/copyright.jpg')]
+    bg-no-repeat
+    bg-contain
+    relative
+  ">
+  <span class="absolute left-[47%] top-[17%]">
+    &copy; {{ site.time | date: '%Y' }} Hannah Hu
+  </span>
+
+  <ul class="grid grid-cols-2 place-items-center absolute bottom-[10%] left-[55%] w-[30%]">
+    <li>
+      <a href="https://twitter.com/hcubism" class="social-icon twitter">
+        <span class="sr-only">Twitter</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/hcubism" class="social-icon github">
+        <span class="sr-only">Github</span>
+      </a>
+    </li>
+  </ul>
+</footer>
