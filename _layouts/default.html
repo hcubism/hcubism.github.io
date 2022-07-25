@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   </head>
   <body class="font-serif">
-    <div class="grid grid-rows-[auto_1fr_auto] p-5 max-w-md mx-auto my-0">
+    <div class="grid gap-4 grid-rows-[auto_1fr_auto] p-5 max-w-md mx-auto my-0">
       {% include head.html %}
 
-      {{ content }}
+      <main class="py-8">
+        {{ content }}
+      </main>
 
     </div>
     <script>

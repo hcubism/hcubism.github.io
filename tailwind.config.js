@@ -18,7 +18,11 @@ module.exports = {
       'sans': ['Merriweather Sans', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
       'serif': ['Merriweather', 'Times New Roman', 'serif'],
     },
-    extend: {},
+    extend: {
+      maxWidth: {
+        'md': '48rem',
+      }
+    },
   },
   plugins: [],
 }

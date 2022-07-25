@@ -19,5 +19,5 @@ postcss:
 
 pagination:
   enabled: true
-  per_page: 5
+  per_page: 2
   permalink: '/page/:num/'
