@@ -1,10 +1,13 @@
 /** @type {import('tailwindcss').Config} */
+const fontsizes = require('./tailwind.config.fontsizes');
+
 module.exports = {
   content: [
     './_includes/**/*.html',
     './_layouts/**/*.html',
     './_posts/*.md',
     './*.html',
+    './assets/js/*.js'
   ],
   theme: {
     screens: {
@@ -14,7 +17,25 @@ module.exports = {
       'xl': '120rem', // 1440p
       '2xl': '240rem', // 4K
     },
-    extend: {},
+    fontFamily: {
+      'sans': ['Merriweather Sans', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
+      'serif': ['Merriweather', 'Times New Roman', 'serif'],
+    },
+    extend: {
+      maxWidth: {
+        'sm': '24rem',
+        'md': '48rem',
+      },
+      spacing: {
+        'mainBodyPadding': 'clamp(1.5rem, 2.5vw, 5rem)'
+      },
+      fontSize: fontsizes,
+    },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio')
+  ],
+  corePlugins: {
+    aspectRatio: false,
+  }
 }

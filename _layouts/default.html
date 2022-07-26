@@ -4,11 +4,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   </head>
-  <body>
-    <div  class="text-center text-red-500">Hello world</div>
+  <body class="font-serif">
+    <div class="body-centered grid gap-4 grid-rows-[auto_1fr_auto] py-mainBodyPadding">
+      {% include head.html %}
 
-    {{ content }}
+      <main class="py-8">
+        {{ content }}
+      </main>
+
+      {% include footer.html %}
+    </div>
+
+    <script>
+      WebFontConfig = {
+        google: {
+          families: ['Merriweather+Sans:700:latin', 'Merriweather::latin'],
+        }
+      };
+
+       (function(d) {
+          var wf = d.createElement('script'), s = d.scripts[0];
+          wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+          wf.async = true;
+          s.parentNode.insertBefore(wf, s);
+       })(document);
+    </script>
+    <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+
+    <script type="module" src="/assets/js/default.js"></script>
   </body>
 </html>

@@ -1,0 +1,43 @@
+<header>
+  <div class="grid grid-cols-[1fr_auto_1fr] gap-4 mb-4">
+    <span></span>
+    <h1 class="mb-0">H-Cubism</h1>
+    <button class="js-search-button">
+      <i class="fa fa-solid fa-magnifying-glass text-2xl"></i>
+    </button>
+  </div>
+  <nav class="font-bold">
+    <ul class="grid grid-cols-2 place-items-center">
+      <li>
+        <a href="/about">About</a>
+      </li>
+      <li>
+        <a href="/feed">RSS</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="
+    js-search-overlay
+    absolute
+    top-0
+    left-0
+    w-[100vw]
+    h-[100vh]
+    bg-[hsla(0,_0%,_0%,_.25)]
+    z-[9999]
+    hidden
+  ">
+    <div class="relative overflow-hidden bg-neutral-50">
+      <form role="search" class="body-centered grid gap-4 grid-cols-[auto_3em] py-mainBodyPadding">
+        <input type="search" placeholder="Search" class="js-search-input p-2 border-2 border-dotted border-sky-900/25" />
+        <button type="submit" class="sr-only">Search</button>
+        <button class="js-close-search text-3xl">
+          <i class="fa fa-xmark">
+            <span class="sr-only">Close</span>
+          </i>
+        </button>
+      </form>
+      <ul class="js-search-results body-centered bg-neutral-50"></ul>
+    </div>
+  </div>
+</header>

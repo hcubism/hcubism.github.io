@@ -1,0 +1,41 @@
+---
+layout: default
+title: "H-Cubism: Moments when I go blahblahblah"
+
+pagination:
+  enabled: true
+---
+
+{% assign posts = paginator.posts %}
+
+{%- if posts.size > 0 -%}
+  {%- if page.list_title -%}
+  <h2 class="">{{ page.list_title }}</h2>
+  {%- endif -%}
+  <ul class="">
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    {%- for post in posts -%}
+    <li class="mb-16">
+      <span class="">{{ post.date | date: date_format }}</span>
+      <h2 class="">
+        <a class="" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h2>
+      {{ post.excerpt }}
+    </li>
+    {%- endfor -%}
+  </ul>
+
+  {% if paginator.total_pages > 1 %}
+    <ul class="flex place-content-evenly">
+    {%- if paginator.previous_page %}
+      <li><a href="{{ paginator.previous_page_path | relative_url }}" class="">&larr; Newer Posts</a></li>
+    {%- endif %}
+    {%- if paginator.next_page %}
+      <li><a href="{{ paginator.next_page_path | relative_url }}" class="">Older Posts &rarr;</a></li>
+    {%- endif %}
+    </ul>
+  {%- endif %}
+
+{%- endif -%}
