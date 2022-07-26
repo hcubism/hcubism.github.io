@@ -9,3 +9,4 @@ gem 'jekyll-sitemap', '~> 1.4'
 gem "jekyll-postcss"
 
 gem "webrick"
+gem 'sass-embedded'
