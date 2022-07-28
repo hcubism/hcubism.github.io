@@ -32,7 +32,7 @@ const initializeEverything = () => {
     searchInput: searchInput,
     resultsContainer: searchResults,
     json: '/search.json',
-    searchResultTemplate: '<li class="search-result pb-4"><a href="{url}">{title}</a></li>',
+    searchResultTemplate: '<li class="search-result pb-4"><a href="{url}">{title}</a> - {date}</li>',
     noResultsText: '<li class="pb-4">Nothing so far...</li>',
     debounceTime: 500,
   });

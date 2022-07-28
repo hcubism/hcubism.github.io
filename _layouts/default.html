@@ -4,11 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="icon" type="image/x-icon" href="{{ "/assets/img/favicon.ico" | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   </head>
   <body class="font-serif">
-    <div class="body-centered grid gap-4 grid-rows-[auto_1fr_auto] py-mainBodyPadding">
+    <div class="body-centered grid gap-4 grid-cols-[100%] grid-rows-[auto_1fr_auto] py-mainBodyPadding">
       {% include head.html %}
 
       <main class="py-8">
@@ -21,7 +22,7 @@
     <script>
       WebFontConfig = {
         google: {
-          families: ['Merriweather+Sans:700:latin', 'Merriweather::latin'],
+          families: ['Merriweather+Sans:700', 'Merriweather', 'Fira+Code'],
         }
       };
 
@@ -34,6 +35,6 @@
     </script>
     <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
 
-    <script type="module" src="/assets/js/default.js"></script>
+    <script type="module" src="{{ "/assets/js/default.js" | relative_url }}"></script>
   </body>
 </html>

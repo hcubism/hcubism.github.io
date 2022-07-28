@@ -6,7 +6,7 @@ module.exports = {
     './_includes/**/*.html',
     './_layouts/**/*.html',
     './_posts/*.md',
-    './*.html',
+    './*.{html,md}',
     './assets/js/*.js'
   ],
   theme: {
@@ -20,6 +20,7 @@ module.exports = {
     fontFamily: {
       'sans': ['Merriweather Sans', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
       'serif': ['Merriweather', 'Times New Roman', 'serif'],
+      'mono': ['Fira Code', 'monospace']
     },
     extend: {
       maxWidth: {

@@ -13,20 +13,20 @@
       decoration-sky-900/25
       decoration-2
     ;
-  }
 
-  a:hover,
-  a:focus {
-    @apply decoration-sky-900
-  }
+    &:hover,
+    &:focus {
+      @apply decoration-sky-900
+    }
 
-  a:focus {
-    @apply
-      outline-2
-      outline-sky-900
-      outline-dotted
-      outline-offset-1
-    ;
+    &:focus {
+      @apply
+        outline-2
+        outline-sky-900
+        outline-dotted
+        outline-offset-1
+      ;
+    }
   }
 
   h1,
@@ -53,6 +53,22 @@
   h4 {
     @apply text-h4;
   }
+
+  pre {
+    @apply
+      overflow-auto
+      max-w-md
+      max-h-96
+      block
+      bg-sky-100
+      p-4
+      mb-4;
+  }
+
+  sub,
+  sup {
+    @apply text-sm -top-1.5;
+  }
 }
 
 @layer components {
@@ -64,22 +80,53 @@
     @apply relative bg-no-repeat inline-block align-middle w-[3rem] h-[3rem] opacity-75 transition ease-linear duration-500;
     background-image: url('/assets/img/external-icons.png');
     background-size: 800%;
-  }
 
-  .social-icon:hover,
-  .social-icon:focus {
-    @apply opacity-100;
-  }
+    &:hover,
+    &:focus {
+      @apply opacity-100;
+    }
 
-  .social-icon.github {
-    background-position: calc((100% / 7 * 3)) 0;
-  }
+    &.github {
+      background-position: calc((100% / 7 * 3)) 0;
+    }
 
-  .social-icon.twitter {
-    background-position: calc((100% / 7 * 2)) 0;
+    &.twitter {
+      background-position: calc((100% / 7 * 2)) 0;
+    }
   }
 
   .search-result {
     @apply py-2;
   }
+
+  .article-body {
+    p,
+    ul,
+    ol {
+      @apply mb-4;
+    }
+
+    ul {
+      @apply list-disc pl-4;
+    }
+
+    ol {
+      @apply list-decimal pl-4;
+    }
+  }
+}
+
+/* Hide the page content while Google Web Font is loading in fonts */
+html,
+.wf-loading {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Fade in the page content once the fonts are ready */
+.wf-active,
+.wf-inactive {
+  transition: all 0.3s;
+  opacity: 1;
+  visibility: visible;
 }
