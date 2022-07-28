@@ -31,11 +31,7 @@ jobs:
         run: npm install
       - name: Setup Pages
         uses: actions/configure-pages@v1
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
+      - run: JEKYLL_ENV=production bundle exec jekyll build --baseurl ${{ steps.pages.outputs.base_path }} # defaults output to '/_site'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
