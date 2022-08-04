@@ -1,10 +1,22 @@
 url: "http://hcubism.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/" # the subpath of your site, e.g. /blog
 title: "H-Cubism" # the name of your site, e.g. ACME Corp.
+tagline: "Moments when I go blahblahblah"
+description: "The personal blog of Hannah Hu, containing moments of blahblahblah-ing"
+author: Hannah Hu
+twitter:
+  username: hcubism
+social:
+  name: Hannah Hu
+  links:
+    - https://twitter.com/hcubism
+    - https://github.com/hcubism
 
 plugins:
   - jekyll-postcss
   - jekyll-paginate-v2
+  - jekyll-feed
+  - jekyll-seo-tag
 
 sass:
   implementation: sass-embedded
@@ -14,11 +26,21 @@ sass:
 postcss:
   cache: false
 
+collections:
+  howtos:
+    output: true
+    permalink: '/howtos/:path'
+  posts:
+    output: true
+    permalink: '/posts/:year/:month/:day/:title'
+
 pagination:
   enabled: true
   per_page: 5
-  permalink: '/page/:num/'
+  permalink: '/:num/'
   sort_reverse: true
+
+permalink: pretty
 
 highlighter: none
 kramdown:

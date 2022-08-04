@@ -3,10 +3,7 @@ const fontsizes = require('./tailwind.config.fontsizes');
 
 module.exports = {
   content: [
-    './_includes/**/*.html',
-    './_layouts/**/*.html',
-    './_posts/*.md',
-    './*.{html,md}',
+    './**/*.{html,md}',
     './assets/js/*.js'
   ],
   theme: {
