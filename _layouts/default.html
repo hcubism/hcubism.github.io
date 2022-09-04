@@ -6,10 +6,24 @@
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="icon" type="image/x-icon" href="{{ "/assets/img/favicon.ico" | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Merriweather+Sans:ital,wght@0,600;0,700;1,600;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
     {% seo %}
+
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (localStorage.themeIsDark === "dark" || (!('themeIsDark' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        localStorage.themeIsDark = "dark";
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.themeIsDark = "light";
+      }
+    </script>
   </head>
-  <body class="font-serif">
+  <body class="font-serif bg-white text-stone-900 dark:bg-stone-800 dark:text-stone-50 dark:font-light">
     <div class="body-centered grid gap-4 grid-cols-[100%] grid-rows-[auto_1fr_auto] py-mainBodyPadding">
       {% include head.html %}
 
@@ -19,23 +33,8 @@
 
       {% include footer.html %}
     </div>
-
-    <script>
-      WebFontConfig = {
-        google: {
-          families: ['Merriweather+Sans:700', 'Merriweather', 'Fira+Code'],
-        }
-      };
-
-       (function(d) {
-          var wf = d.createElement('script'), s = d.scripts[0];
-          wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-          wf.async = true;
-          s.parentNode.insertBefore(wf, s);
-       })(document);
-    </script>
     <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
-
+    <script src="{{ "/assets/js/fontfaceobserver.standalone.js" | relative_url }}"></script>
     <script type="module" src="{{ "/assets/js/default.js" | relative_url }}"></script>
   </body>
 </html>

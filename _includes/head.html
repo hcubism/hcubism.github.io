@@ -1,15 +1,22 @@
 <header>
   <div class="grid grid-cols-[1fr_auto_1fr] gap-4 mb-4">
-    <span></span>
+    <div>
+      <button class="js-theme-toggle">
+        <i class="fa fa-solid fa-sun text-2xl dark:hidden"></i>
+        <i class="fa fa-solid fa-moon text-2xl hidden dark:inline"></i>
+      </button>
+    </div>
     <a href="/" class="text-inherit no-underline"><h1 class="mb-0">H-Cubism</h1></a>
-    <button class="js-search-button">
-      <i class="fa fa-solid fa-magnifying-glass text-2xl"></i>
-    </button>
+    <div class="text-right">
+      <button class="js-search-button">
+        <i class="fa fa-solid fa-magnifying-glass text-2xl"></i>
+      </button>
+     </div>
   </div>
-  <nav class="font-bold">
+  <nav>
     <ul class="grid grid-cols-3 place-items-center">
       <li>
-        <a href="/howtos">How-to Guides</a>
+        <a href="/howtos">Guides</a>
       </li>
       <li>
         <a href="/about">About</a>
@@ -26,21 +33,23 @@
     left-0
     w-[100vw]
     h-[100vh]
-    bg-[hsla(0,_0%,_0%,_.25)]
+    bg-[hsla(0,_0%,_0%,_.5)]
     z-[9999]
     hidden
   ">
-    <div class="relative overflow-hidden bg-neutral-50">
-      <form role="search" class="body-centered grid gap-4 grid-cols-[auto_3em] py-mainBodyPadding">
-        <input type="search" placeholder="Search" class="js-search-input p-2 border-2 border-dotted border-sky-900/25" />
+    <div class="relative overflow-hidden bg-stone-50 dark:bg-stone-800">
+      <form role="search" class="body-centered grid gap-4 grid-cols-[auto_fit-content(3rem)] py-mainBodyPadding">
+        <input type="search" placeholder="Search" class="js-search-input p-2 border-2 border-dotted border-sky-900/25 dark:bg-stone-600" />
         <button type="submit" class="sr-only">Search</button>
-        <button class="js-close-search text-3xl">
-          <i class="fa fa-xmark">
-            <span class="sr-only">Close</span>
-          </i>
-        </button>
+        <div class="text-right">
+          <button class="js-close-search text-3xl">
+            <i class="fa fa-xmark">
+              <span class="sr-only">Close</span>
+            </i>
+          </button>
+        </div>
       </form>
-      <ul class="js-search-results body-centered bg-neutral-50"></ul>
+      <ul class="js-search-results body-centered bg-neutral-50 dark:bg-stone-800"></ul>
     </div>
   </div>
 </header>

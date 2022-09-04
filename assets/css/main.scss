@@ -12,11 +12,13 @@
       underline
       decoration-sky-900/25
       decoration-2
+      dark:text-sky-500
+      dark:decoration-sky-500/25
     ;
 
     &:hover,
     &:focus {
-      @apply decoration-sky-900
+      @apply decoration-sky-900 dark:decoration-sky-500;
     }
 
     &:focus {
@@ -25,6 +27,7 @@
         outline-sky-900
         outline-dotted
         outline-offset-1
+        dark:outline-sky-500
       ;
     }
   }
@@ -33,7 +36,7 @@
   h2,
   h3,
   h4 {
-    @apply font-sans font-bold mt-0 mb-[.65em];
+    @apply font-sans font-bold mt-0 mb-[.65em] dark:font-semibold;
     text-rendering: optimizeLegibility;
     line-height: calc(2px + 2ex + 2px);
   }
@@ -117,16 +120,9 @@
 }
 
 /* Hide the page content while Google Web Font is loading in fonts */
-html,
-.wf-loading {
-  visibility: hidden;
-  opacity: 0;
+html {
 }
 
 /* Fade in the page content once the fonts are ready */
-.wf-active,
-.wf-inactive {
-  transition: all 0.3s;
-  opacity: 1;
-  visibility: visible;
+.fonts-loaded {
 }

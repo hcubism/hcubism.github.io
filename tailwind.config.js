@@ -6,6 +6,7 @@ module.exports = {
     './**/*.{html,md}',
     './assets/js/*.js'
   ],
+  darkMode: 'class',
   theme: {
     screens: {
       'sm': '22.5rem', // mobile
